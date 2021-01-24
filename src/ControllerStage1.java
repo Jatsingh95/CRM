@@ -43,8 +43,6 @@ public class ControllerStage1 {
                     ControllerStage2 controllerStage2 = loader.getController();
                     controllerStage2.setCustomer(cedula);
 
-
-
                     Stage stage = (Stage) searchButton.getScene().getWindow();
                     stage.setScene(new Scene(root));
 
