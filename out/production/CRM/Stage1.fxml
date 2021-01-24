@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="700.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ControllerStage1">
+   <children>
+      <AnchorPane prefHeight="700.0" prefWidth="150.0" style="-fx-background-color: #2c3e50;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <AnchorPane layoutX="150.0" style="-fx-background-color: #95a5a6;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fx:id="logoImageView" fitHeight="82.0" fitWidth="305.0" layoutX="23.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="23.0" AnchorPane.rightAnchor="22.0">
+               <image>
+                  <Image url="@Image%20Assets/VisionPlus%20Logo.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="customerSearchImageView" fitHeight="217.0" fitWidth="200.0" layoutX="76.0" layoutY="166.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Image%20Assets/Customer%20Search%20Image.png" />
+               </image>
+            </ImageView>
+            <HBox layoutX="75.0" layoutY="404.0" prefHeight="58.0" prefWidth="200.0">
+               <children>
+                  <TextField fx:id="cedulaTextField" onAction="#searchButtonClicked" promptText="Cedula" />
+                  <Button fx:id="searchButton" defaultButton="true" mnemonicParsing="false" onAction="#searchButtonClicked" text="Buscar" />
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

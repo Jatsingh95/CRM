@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="700.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ControllerStage2">
+   <children>
+      <AnchorPane prefHeight="100.0" prefWidth="500.0" style="-fx-background-color: #2c3e50;" />
+      <AnchorPane layoutY="100.0" prefHeight="600.0" prefWidth="500.0" style="-fx-background-color: #95a5a6;">
+         <children>
+            <Label layoutX="120.0" layoutY="14.0" text="Cliente No Encontrado" textFill="WHITE" AnchorPane.leftAnchor="120.0" AnchorPane.rightAnchor="119.0">
+               <font>
+                  <Font name="Gill Sans MT Bold" size="24.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="230.0" fitWidth="230.0" layoutX="144.0" layoutY="61.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="144.0" AnchorPane.rightAnchor="144.44920349121094">
+               <image>
+                  <Image url="@Image%20Assets/New%20Customer%20Image.png" />
+               </image>
+            </ImageView>
+            <VBox alignment="CENTER" layoutX="174.0" layoutY="315.0" AnchorPane.leftAnchor="174.0" AnchorPane.rightAnchor="173.0">
+               <children>
+                  <Label text="Crear nuevo cliente?">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="cedulaLabel" text="VALUE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <Button fx:id="createButton" defaultButton="true" layoutX="333.0" layoutY="390.0" mnemonicParsing="false" onAction="#createButtonClicked" style="-fx-background-radius: 40;">
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Image%20Assets/Check%20Button.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="cancelButton" layoutX="113.0" layoutY="390.0" mnemonicParsing="false" onAction="#cancelButtonClicked" style="-fx-background-radius: 40;">
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Image%20Assets/X%20Button.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
