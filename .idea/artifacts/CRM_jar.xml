@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="CRM:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/CRM_jar</output-path>
+    <root id="archive" name="CRM.jar">
+      <element id="module-output" name="CRM" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../mysql-connector-java-8.0.22/mysql-connector-java-8.0.22.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
