@@ -56,10 +56,10 @@
                         <Insets top="20.0" />
                      </padding>
                   </Label>
-                  <TextArea fx:id="notasLabel" layoutX="59.0" layoutY="577.0" prefHeight="100.0" prefWidth="250.0" AnchorPane.leftAnchor="59.0" AnchorPane.rightAnchor="41.0" />
+                  <TextArea fx:id="notasLabel" editable="false" layoutX="59.0" layoutY="577.0" prefHeight="100.0" prefWidth="250.0" AnchorPane.leftAnchor="59.0" AnchorPane.rightAnchor="41.0" />
                   <HBox alignment="TOP_RIGHT" layoutX="59.0" layoutY="711.0" spacing="10.0" AnchorPane.rightAnchor="0.0">
                      <children>
-                        <Button fx:id="saveButton" mnemonicParsing="false" onAction="#saveButtonClicked" text="Guardar" />
+                        <Button fx:id="saveButton" mnemonicParsing="false" onAction="#saveButtonClicked" text="Guardar" visible="false" />
                         <Button fx:id="editButton" mnemonicParsing="false" onAction="#editButtonClicked" text="Editar" />
                         <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#cancelButtonClicked" text="Cancelar" />
                      </children>
@@ -74,20 +74,20 @@
                               <Font size="16.0" />
                            </font>
                         </Label>
-                        <TextField fx:id="pd1Label" layoutX="47.0" layoutY="18.0" prefWidth="50.0" />
+                        <TextField fx:id="pd1Label" editable="false" layoutX="47.0" layoutY="18.0" prefWidth="50.0" />
                         <Label layoutX="103.0" layoutY="17.0" text="/">
                            <font>
                               <Font size="18.0" />
                            </font>
                         </Label>
-                        <TextField fx:id="pd2Label" layoutX="118.0" layoutY="18.0" prefWidth="50.0" />
+                        <TextField fx:id="pd2Label" editable="false" layoutX="118.0" layoutY="18.0" prefWidth="50.0" />
                         <Label layoutX="15.0" layoutY="55.0" text="AV">
                            <font>
                               <Font size="16.0" />
                            </font>
                         </Label>
-                        <TextField fx:id="avodLabel" layoutX="47.0" layoutY="55.0" prefWidth="50.0" />
-                        <TextField fx:id="avoiLabel" layoutX="118.0" layoutY="55.0" prefWidth="50.0" />
+                        <TextField fx:id="avodLabel" editable="false" layoutX="47.0" layoutY="55.0" prefWidth="50.0" />
+                        <TextField fx:id="avoiLabel" editable="false" layoutX="118.0" layoutY="55.0" prefWidth="50.0" />
                         <Label layoutX="14.0" layoutY="101.0" text="Tipo de Lente">
                            <font>
                               <Font size="16.0" />
@@ -136,14 +136,14 @@
                               <Label text="Cilindro" GridPane.columnIndex="2" />
                               <Label text="Eje" GridPane.columnIndex="3" />
                               <Label text="Adicion" GridPane.columnIndex="4" />
-                              <TextField fx:id="rodEsfLabel" prefWidth="50.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                              <TextField fx:id="rodCilLabel" prefWidth="50.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                              <TextField fx:id="rodEjeLabel" prefWidth="50.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-                              <TextField fx:id="rodAdLabel" prefWidth="50.0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
-                              <TextField fx:id="roiEsfLabel" prefWidth="50.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                              <TextField fx:id="roiCilLabel" prefWidth="50.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                              <TextField fx:id="roiEjeLabel" prefWidth="50.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-                              <TextField fx:id="roiAdLabel" prefWidth="50.0" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                              <TextField fx:id="rodEsfLabel" editable="false" prefWidth="50.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <TextField fx:id="rodCilLabel" editable="false" prefWidth="50.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                              <TextField fx:id="rodEjeLabel" editable="false" prefWidth="50.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                              <TextField fx:id="rodAdLabel" editable="false" prefWidth="50.0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                              <TextField fx:id="roiEsfLabel" editable="false" prefWidth="50.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <TextField fx:id="roiCilLabel" editable="false" prefWidth="50.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                              <TextField fx:id="roiEjeLabel" editable="false" prefWidth="50.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                              <TextField fx:id="roiAdLabel" editable="false" prefWidth="50.0" GridPane.columnIndex="4" GridPane.rowIndex="2" />
                            </children>
                         </GridPane>
                      </children>
@@ -166,14 +166,14 @@
                               <Label text="Cilindro" GridPane.columnIndex="2" />
                               <Label text="Eje" GridPane.columnIndex="3" />
                               <Label text="Adicion" GridPane.columnIndex="4" />
-                              <TextField fx:id="rlcodEsfLabel" prefWidth="50.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                              <TextField fx:id="rlcodCilLabel" prefWidth="50.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                              <TextField fx:id="rlcodEjeLabel" prefWidth="50.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-                              <TextField fx:id="rlcodAdLabel" prefWidth="50.0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
-                              <TextField fx:id="rlcoiEsfLabel" prefWidth="50.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                              <TextField fx:id="rlcoiCilLabel" prefWidth="50.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                              <TextField fx:id="rlcoiEjeLabel" prefWidth="50.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-                              <TextField fx:id="rlcoiAdLabel" prefWidth="50.0" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                              <TextField fx:id="rlcodEsfLabel" editable="false" prefWidth="50.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <TextField fx:id="rlcodCilLabel" editable="false" prefWidth="50.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                              <TextField fx:id="rlcodEjeLabel" editable="false" prefWidth="50.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                              <TextField fx:id="rlcodAdLabel" editable="false" prefWidth="50.0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                              <TextField fx:id="rlcoiEsfLabel" editable="false" prefWidth="50.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <TextField fx:id="rlcoiCilLabel" editable="false" prefWidth="50.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                              <TextField fx:id="rlcoiEjeLabel" editable="false" prefWidth="50.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                              <TextField fx:id="rlcoiAdLabel" editable="false" prefWidth="50.0" GridPane.columnIndex="4" GridPane.rowIndex="2" />
                            </children>
                            <columnConstraints>
                               <ColumnConstraints hgrow="SOMETIMES" />
@@ -208,13 +208,13 @@
                               <Label text="Cilindro" GridPane.columnIndex="2" />
                               <Label text="Eje" GridPane.columnIndex="3" />
                               <Label text="Adicion" GridPane.columnIndex="4" />
-                              <TextField fx:id="rpodEsfLabel" prefWidth="50.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                              <TextField fx:id="rpodCilLabel" prefWidth="50.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                              <TextField fx:id="rpodEjeLabel" prefWidth="50.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-                              <TextField fx:id="rpodAdLabel" prefWidth="50.0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
-                              <TextField fx:id="rpoiEsfLabel" prefWidth="50.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <TextField fx:id="rpodEsfLabel" editable="false" prefWidth="50.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <TextField fx:id="rpodCilLabel" editable="false" prefWidth="50.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                              <TextField fx:id="rpodEjeLabel" editable="false" prefWidth="50.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                              <TextField fx:id="rpodAdLabel" editable="false" prefWidth="50.0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                              <TextField fx:id="rpoiEsfLabel" editable="false" prefWidth="50.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                               <TextField fx:id="rpoiCilLabel" prefWidth="50.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                              <TextField fx:id="rpoiEjeLabel" prefWidth="50.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                              <TextField fx:id="rpoiEjeLabel" editable="false" prefWidth="50.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
                               <TextField fx:id="rpoiAdLabel" prefWidth="50.0" GridPane.columnIndex="4" GridPane.rowIndex="2" />
                            </children>
                            <columnConstraints>
@@ -241,7 +241,7 @@
             </AnchorPane>
             <AnchorPane prefHeight="750.0" prefWidth="200.0" style="-fx-background-color: #2c3e50;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
-                  <ImageView fitHeight="150.0" fitWidth="250.0" layoutX="25.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="25.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@Image%20Assets/Form%20Icon.png" />
                      </image>
