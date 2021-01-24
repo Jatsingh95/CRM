@@ -164,13 +164,11 @@ public class ControllerStage9 implements Initializable {
 
             ControllerStage6 controllerStage6 = loader.getController();
             controllerStage6.setCustomer(customer.getCedula());
-            Stage stage = new Stage();
+
+            Stage stage = (Stage) cancelButton.getScene().getWindow();
             stage.setScene(new Scene(root));
 
-            Stage oldStage = (Stage) cancelButton.getScene().getWindow();
 
-            oldStage.close();
-            stage.show();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -186,13 +184,10 @@ public class ControllerStage9 implements Initializable {
 
                 ControllerStage6 controllerStage6 = loader.getController();
                 controllerStage6.setCustomer(customer.getCedula());
-                Stage stage = new Stage();
+
+                Stage stage = (Stage) saveButton.getScene().getWindow();
                 stage.setScene(new Scene(root));
 
-                Stage oldStage = (Stage) saveButton.getScene().getWindow();
-
-                oldStage.close();
-                stage.show();
             } catch (IOException e) {
                 e.printStackTrace();
             }

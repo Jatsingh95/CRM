@@ -84,13 +84,10 @@ public class ControllerStage6 implements Initializable {
 
             ControllerStage9 controllerStage9 = loader.getController();
             controllerStage9.setPrescription(prescriptionID);
-            Stage stage = new Stage();
+
+            Stage stage = (Stage) editCustomerButton.getScene().getWindow();
             stage.setScene(new Scene(root));
 
-            Stage oldStage = (Stage) editCustomerButton.getScene().getWindow();
-
-            oldStage.close();
-            stage.show();
         } catch (IOException e) {
             e.printStackTrace();
         }

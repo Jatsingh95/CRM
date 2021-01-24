@@ -69,7 +69,6 @@ public class ControllerStage7 implements Initializable {
         cedulaLabel.setText(Cedula);
     }
 
-
     public void acceptButtonClicked(){
         if(createPrescription()){
             try {
