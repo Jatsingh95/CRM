@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.geometry.*?>
 <?import java.lang.*?>
@@ -8,9 +9,9 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="700.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ControllerStage1">
+<AnchorPane prefHeight="650.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ControllerStage1">
    <children>
-      <AnchorPane prefHeight="700.0" prefWidth="150.0" style="-fx-background-color: #2c3e50;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <AnchorPane prefWidth="150.0" style="-fx-background-color: #2c3e50;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
       <AnchorPane layoutX="150.0" style="-fx-background-color: #95a5a6;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <ImageView fx:id="logoImageView" fitHeight="82.0" fitWidth="305.0" layoutX="23.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="23.0" AnchorPane.rightAnchor="22.0">
@@ -18,17 +19,135 @@
                   <Image url="@Image%20Assets/VisionPlus%20Logo.jpg" />
                </image>
             </ImageView>
-            <ImageView fx:id="customerSearchImageView" fitHeight="217.0" fitWidth="200.0" layoutX="76.0" layoutY="166.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="customerSearchImageView" fitHeight="217.0" fitWidth="200.0" layoutX="85.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@Image%20Assets/Customer%20Search%20Image.png" />
                </image>
             </ImageView>
-            <HBox layoutX="75.0" layoutY="404.0" prefHeight="58.0" prefWidth="200.0">
+            <HBox layoutX="75.0" layoutY="344.0" prefHeight="58.0" prefWidth="200.0">
                <children>
                   <TextField fx:id="cedulaTextField" onAction="#searchButtonClicked" promptText="Cedula" />
                   <Button fx:id="searchButton" defaultButton="true" mnemonicParsing="false" onAction="#searchButtonClicked" text="Buscar" />
                </children>
             </HBox>
+            <VBox layoutX="35.0" layoutY="424.0" prefHeight="200.0" prefWidth="300.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                     <children>
+                        <Label fx:id="rcname1" onMouseClicked="#rcid1Clicked" text="Cliente">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                        <Label fx:id="rcid1" onMouseClicked="#rcid1Clicked" text="Cedula">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                     <children>
+                        <Label fx:id="rcname2" onMouseClicked="#rcid2Clicked" text="Cliente">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                        <Label fx:id="rcid2" onMouseClicked="#rcid2Clicked" text="Cedula">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                     <children>
+                        <Label fx:id="rcname3" onMouseClicked="#rcid3Clicked" text="Cliente">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                        <Label fx:id="rcid3" onMouseClicked="#rcid3Clicked" text="Cedula">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                     <children>
+                        <Label fx:id="rcname4" onMouseClicked="#rcid4Clicked" text="Cliente">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                        <Label fx:id="rcid4" onMouseClicked="#rcid4Clicked" text="Cedula">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                     <children>
+                        <Label fx:id="rcname5" onMouseClicked="#rcid5Clicked" text="Cliente">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                        <Label fx:id="rcid5" onMouseClicked="#rcid5Clicked" text="Cedula">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <Label layoutX="35.0" layoutY="394.0" text="Recientes">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
    </children>

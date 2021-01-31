@@ -96,6 +96,7 @@ public class ControllerStage6 implements Initializable {
     public void setCustomer(String cedula){
         loadLabelValues(cedula);
         loadPrescriptions(cedula);
+        addToRecent(cedula);
     }
 
     private void loadLabelValues(String cedula){
@@ -180,4 +181,85 @@ public class ControllerStage6 implements Initializable {
         stageSwitcher.switchStages();
     }
 
+
+    private void addToRecent(String cedula){
+        Customer customer = new Customer(cedula);
+        int customerID = customer.getCustomerID();
+
+        if(checkIfRecent(cedula)){
+            //If the customer is already registered in the recent table, modify the timestamp
+            Connection myConn = DataBaseHandler.connectToDataBase();
+            PreparedStatement myStmt = null;
+            ResultSet myRs = null;
+
+            try {
+                myStmt = myConn.prepareStatement("UPDATE recentcustomers SET " +
+                        "Time = ? WHERE Customer_ID = ?");
+
+                java.util.Date date = new Date();
+                Object param = new java.sql.Timestamp(date.getTime());
+
+                myStmt.setTimestamp(1, (Timestamp) param);
+                myStmt.setInt(2,customerID);
+
+
+                myStmt.execute();
+
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+            DataBaseHandler.disconnectFromDataBase(myRs,myStmt,myConn);
+        }
+        else{
+            //If the customer is not already registered in the recent table, add him with the current time
+            Connection myConn = DataBaseHandler.connectToDataBase();
+            PreparedStatement myStmt = null;
+            ResultSet myRs = null;
+            try {
+                myStmt = myConn.prepareStatement("insert into recentcustomers (Customer_ID, Time)"
+                        + "values (?, ?)");
+                myStmt.setInt(1,customerID);
+
+                java.util.Date date = new Date();
+                Object param = new java.sql.Timestamp(date.getTime());
+
+                myStmt.setTimestamp(2, (Timestamp) param);
+                myStmt.execute();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+            DataBaseHandler.disconnectFromDataBase(myRs,myStmt,myConn);
+        }
+
+
+    }
+
+
+    private boolean checkIfRecent(String cedula){
+        Customer customer = new Customer(cedula);
+        int customerID = customer.getCustomerID();
+
+        Connection myConn = DataBaseHandler.connectToDataBase();
+        PreparedStatement myStmt = null;
+        ResultSet myRs = null;
+        try {
+            myStmt = myConn.prepareStatement("select * from recentcustomers where Customer_ID = ?");
+            myStmt.setInt(1,customerID);
+            myRs = myStmt.executeQuery();
+            if (!myRs.next()){
+                DataBaseHandler.disconnectFromDataBase(myRs,myStmt,myConn);
+                return false;
+            }
+            else {
+                DataBaseHandler.disconnectFromDataBase(myRs,myStmt,myConn);
+                return true;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        DataBaseHandler.disconnectFromDataBase(myRs,myStmt,myConn);
+        return false;
+    }
+
 }
+
