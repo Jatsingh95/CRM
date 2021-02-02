@@ -1,20 +1,18 @@
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import javafx.util.Callback;
-
-import java.awt.event.InputEvent;
 import java.io.IOException;
 import java.sql.*;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.Date;
+import java.time.LocalDate;
+import java.time.Period;
 import java.util.ResourceBundle;
+import java.util.Date;
 
 public class ControllerStage6 implements Initializable {
 
@@ -105,7 +103,13 @@ public class ControllerStage6 implements Initializable {
         firstNameLabel.setText(currCust.getFirstName());
         lastNameLabel.setText(currCust.getLastName());
         phone1Label.setText(String.valueOf(currCust.getPhone1()));
-        dobLabel.setText((currCust.getDateOfBirth().toString()));
+
+        java.sql.Date dob = currCust.getDateOfBirth();
+        Period period = Period.between(dob.toLocalDate(), LocalDate.now());
+        int age = period.getYears();
+
+        dobLabel.setText((currCust.getDateOfBirth().toString())+ " (" + age+")");
+
 
 
         if(currCust.getPhone2()==0) {

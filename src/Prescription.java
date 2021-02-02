@@ -75,39 +75,39 @@ public class Prescription {
                 this.setCustomerID(myRs.getInt("Customer_ID"));
 
                 this.setRodEsf(myRs.getDouble("R_OD_Esf"));
-                this.setRodCil(myRs.getInt("R_OD_Cil"));
-                this.setRodEje(myRs.getInt("R_OD_Eje"));
-                this.setRodAd(myRs.getInt("R_OD_Ad"));
+                this.setRodCil(myRs.getDouble("R_OD_Cil"));
+                this.setRodEje(myRs.getDouble("R_OD_Eje"));
+                this.setRodAd(myRs.getDouble("R_OD_Ad"));
 
-                this.setRoiEsf(myRs.getInt("R_OI_Esf"));
-                this.setRoiCil(myRs.getInt("R_OI_Cil"));
-                this.setRoiEje(myRs.getInt("R_OI_Eje"));
-                this.setRoiAd(myRs.getInt("R_OI_Ad"));
+                this.setRoiEsf(myRs.getDouble("R_OI_Esf"));
+                this.setRoiCil(myRs.getDouble("R_OI_Cil"));
+                this.setRoiEje(myRs.getDouble("R_OI_Eje"));
+                this.setRoiAd(myRs.getDouble("R_OI_Ad"));
 
-                this.setPd1(myRs.getInt("Pd_1"));
-                this.setPd2(myRs.getInt("Pd_2"));
-                this.setAvod(myRs.getInt("AV_OD"));
-                this.setAvoi(myRs.getInt("AV_OI"));
+                this.setPd1(myRs.getDouble("Pd_1"));
+                this.setPd2(myRs.getDouble("Pd_2"));
+                this.setAvod(myRs.getDouble("AV_OD"));
+                this.setAvoi(myRs.getDouble("AV_OI"));
 
-                this.setRlcodEsf(myRs.getInt("LC_OD_Esf"));
-                this.setRlcodCil(myRs.getInt("LC_OD_Cil"));
-                this.setRlcodEje(myRs.getInt("LC_OD_Eje"));
-                this.setRlcodAd(myRs.getInt("LC_OD_Ad"));
+                this.setRlcodEsf(myRs.getDouble("LC_OD_Esf"));
+                this.setRlcodCil(myRs.getDouble("LC_OD_Cil"));
+                this.setRlcodEje(myRs.getDouble("LC_OD_Eje"));
+                this.setRlcodAd(myRs.getDouble("LC_OD_Ad"));
 
-                this.setRlcoiEsf(myRs.getInt("LC_OI_Esf"));
-                this.setRlcoiCil(myRs.getInt("LC_OI_Cil"));
-                this.setRlcoiEje(myRs.getInt("LC_OI_Eje"));
-                this.setRlcoiAd(myRs.getInt("LC_OI_Ad"));
+                this.setRlcoiEsf(myRs.getDouble("LC_OI_Esf"));
+                this.setRlcoiCil(myRs.getDouble("LC_OI_Cil"));
+                this.setRlcoiEje(myRs.getDouble("LC_OI_Eje"));
+                this.setRlcoiAd(myRs.getDouble("LC_OI_Ad"));
 
-                this.setRpodEsf(myRs.getInt("Prev_OD_Esf"));
-                this.setRpodCil(myRs.getInt("Prev_OD_Cil"));
-                this.setRpodEje(myRs.getInt("Prev_OD_Eje"));
-                this.setRpodAd(myRs.getInt("Prev_OD_Ad"));
+                this.setRpodEsf(myRs.getDouble("Prev_OD_Esf"));
+                this.setRpodCil(myRs.getDouble("Prev_OD_Cil"));
+                this.setRpodEje(myRs.getDouble("Prev_OD_Eje"));
+                this.setRpodAd(myRs.getDouble("Prev_OD_Ad"));
 
-                this.setRpoiEsf(myRs.getInt("Prev_OI_Esf"));
-                this.setRpoiCil(myRs.getInt("Prev_OI_Cil"));
-                this.setRpoiEje(myRs.getInt("Prev_OI_Eje"));
-                this.setRpoiAd(myRs.getInt("Prev_OI_Ad"));
+                this.setRpoiEsf(myRs.getDouble("Prev_OI_Esf"));
+                this.setRpoiCil(myRs.getDouble("Prev_OI_Cil"));
+                this.setRpoiEje(myRs.getDouble("Prev_OI_Eje"));
+                this.setRpoiAd(myRs.getDouble("Prev_OI_Ad"));
 
                 this.setLensType(myRs.getString("Lens_Type"));
                 this.setNotas(myRs.getString("Notas"));

@@ -57,16 +57,8 @@
                      </padding>
                   </Label>
                   <TextArea fx:id="notasLabel" layoutX="66.0" layoutY="537.0" prefHeight="50.0" prefWidth="250.0" />
-                  <HBox alignment="TOP_RIGHT" layoutX="35.0" layoutY="593.0" spacing="10.0">
+                  <HBox alignment="TOP_RIGHT" layoutX="175.0" layoutY="593.0" spacing="10.0">
                      <children>
-                        <Label fx:id="warningLabel" alignment="TOP_CENTER" text="Warning Label" textAlignment="CENTER" textFill="RED" visible="false">
-                           <font>
-                              <Font name="System Bold" size="14.0" />
-                           </font>
-                           <HBox.margin>
-                              <Insets right="20.0" />
-                           </HBox.margin>
-                        </Label>
                         <Button fx:id="acceptButton" mnemonicParsing="false" onAction="#acceptButtonClicked" text="Aceptar" />
                         <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#cancelButtonClicked" text="Cancelar" />
                      </children>
@@ -229,6 +221,11 @@
                         </GridPane>
                      </children>
                   </VBox>
+                  <Label fx:id="warningLabel" alignment="TOP_CENTER" layoutX="2.0" layoutY="626.0" text="Warning Label" textAlignment="CENTER" textFill="RED" visible="false">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
                </children>
             </AnchorPane>
             <AnchorPane prefHeight="650.0" prefWidth="200.0" style="-fx-background-color: #2c3e50;">

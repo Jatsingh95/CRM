@@ -143,52 +143,29 @@ public class ControllerStage7 implements Initializable {
             return true;
         }
         else{
-            warningLabel.setText("Error");
-            warningLabel.setVisible(true);
+            //warningLabel.setText("Error");
+            //warningLabel.setVisible(true);
             return false;
         }
     }
 
     private boolean checkValues(){
-        if(checkifDouble(rodEsfLabel.getText(), "Receta Nueva - OD-Esf")){
+        if(checkifDouble(rodEsfLabel.getText(), rodEsfLabel)){
         }
         else {
             return false;
         }
-        if(checkifDouble(rodCilLabel.getText(), "Receta Nueva - OD-Cil")){
+        if(checkifDouble(rodCilLabel.getText(), rodCilLabel)){
         }
         else {
             return false;
         }
-        if(checkifDouble(rodEjeLabel.getText(), "Receta Nueva - OD-Eje")){
+        if(checkifDouble(rodEjeLabel.getText(), rodEjeLabel)){
         }
         else {
             return false;
         }
-        if(checkifDouble(rodAdLabel.getText(), "Receta Nueva - OD-Ad")){
-        }
-        else {
-            return false;
-        }
-
-
-
-        if(checkifDouble(roiEsfLabel.getText(), "Receta Nueva - OI-Esf")){
-        }
-        else {
-            return false;
-        }
-        if(checkifDouble(roiCilLabel.getText(), "Receta Nueva - OI-Cil")){
-        }
-        else {
-            return false;
-        }
-        if(checkifDouble(roiEjeLabel.getText(), "Receta Nueva - OI-Eje")){
-        }
-        else {
-            return false;
-        }
-        if(checkifDouble(roiAdLabel.getText(), "Receta Nueva - OI-Ad")){
+        if(checkifDouble(rodAdLabel.getText(), rodAdLabel)){
         }
         else {
             return false;
@@ -196,69 +173,22 @@ public class ControllerStage7 implements Initializable {
 
 
 
-
-        if(checkifDouble(pd1Label.getText(), "Receta Nueva - Pd1")){
+        if(checkifDouble(roiEsfLabel.getText(), roiEsfLabel)){
         }
         else {
             return false;
         }
-        if(checkifDouble(pd2Label.getText(), "Receta Nueva - Pd2")){
+        if(checkifDouble(roiCilLabel.getText(), roiCilLabel)){
         }
         else {
             return false;
         }
-        if(checkifDouble(avodLabel.getText(), "Receta Nueva - OD-AV")){
+        if(checkifDouble(roiEjeLabel.getText(), roiEjeLabel)){
         }
         else {
             return false;
         }
-        if(checkifDouble(avoiLabel.getText(), "Receta Nueva - OI-AV")){
-        }
-        else {
-            return false;
-        }
-
-
-
-        if(checkifDouble(rlcodEsfLabel.getText(), "Receta LC - OD-Esf")){
-        }
-        else {
-            return false;
-        }
-        if(checkifDouble(rlcodCilLabel.getText(), "Receta LC - OD-Cil")){
-        }
-        else {
-            return false;
-        }
-        if(checkifDouble(rlcodEjeLabel.getText(), "Receta LC - OD-Eje")){
-        }
-        else {
-            return false;
-        }
-        if(checkifDouble(rlcodAdLabel.getText(), "Receta LC - OD-Ad")){
-        }
-        else {
-            return false;
-        }
-
-
-
-        if(checkifDouble(rlcoiEsfLabel.getText(), "Receta LC - OI-Esf")){
-        }
-        else {
-            return false;
-        }
-        if(checkifDouble(rlcoiCilLabel.getText(), "Receta LC - OI-Cil")){
-        }
-        else {
-            return false;
-        }
-        if(checkifDouble(rlcoiEjeLabel.getText(), "Receta LC - OI-Eje")){
-        }
-        else {
-            return false;
-        }
-        if(checkifDouble(rlcoiAdLabel.getText(), "Receta LC - OI-Ad")){
+        if(checkifDouble(roiAdLabel.getText(), roiAdLabel)){
         }
         else {
             return false;
@@ -267,46 +197,116 @@ public class ControllerStage7 implements Initializable {
 
 
 
-
-        if(checkifDouble(rpodEsfLabel.getText(), "Receta Previa - OD-Esf")){
+        if(checkifDouble(pd1Label.getText(), pd1Label)){
         }
         else {
             return false;
         }
-        if(checkifDouble(rpodCilLabel.getText(), "Receta Previa - OD-Cil")){
+        if(checkifDouble(pd2Label.getText(), pd2Label)){
         }
         else {
             return false;
         }
-        if(checkifDouble(rpodEjeLabel.getText(), "Receta Previa - OD-Eje")){
+        if(checkifDouble(avodLabel.getText(), avodLabel)){
         }
         else {
             return false;
         }
-        if(checkifDouble(rpodAdLabel.getText(), "Receta Previa - OD-Ad")){
+        if(checkifDouble(avoiLabel.getText(), avoiLabel)){
         }
         else {
             return false;
         }
-
 
 
-        if(checkifDouble(rpoiEsfLabel.getText(), "Receta Previa - OI-Esf")){
+
+        if(checkifDouble(rlcodEsfLabel.getText(), rlcodEsfLabel)){
         }
         else {
             return false;
         }
-        if(checkifDouble(rpoiCilLabel.getText(), "Receta Previa - OI-Cil")){
+        if(checkifDouble(rlcodCilLabel.getText(), rlcodCilLabel)){
         }
         else {
             return false;
         }
-        if(checkifDouble(rpoiEjeLabel.getText(), "Receta Previa - OI-Eje")){
+        if(checkifDouble(rlcodEjeLabel.getText(), rlcodEjeLabel)){
         }
         else {
             return false;
         }
-        if(checkifDouble(rpoiAdLabel.getText(), "Receta Previa - OI-Ad")){
+        if(checkifDouble(rlcodAdLabel.getText(), rlcodAdLabel)){
+        }
+        else {
+            return false;
+        }
+
+
+
+        if(checkifDouble(rlcoiEsfLabel.getText(), rlcoiEsfLabel)){
+        }
+        else {
+            return false;
+        }
+        if(checkifDouble(rlcoiCilLabel.getText(), rlcoiCilLabel)){
+        }
+        else {
+            return false;
+        }
+        if(checkifDouble(rlcoiEjeLabel.getText(), rlcoiEjeLabel)){
+        }
+        else {
+            return false;
+        }
+        if(checkifDouble(rlcoiAdLabel.getText(), rlcoiAdLabel)){
+        }
+        else {
+            return false;
+        }
+
+
+
+
+
+        if(checkifDouble(rpodEsfLabel.getText(), rpodEsfLabel)){
+        }
+        else {
+            return false;
+        }
+        if(checkifDouble(rpodCilLabel.getText(), rpodCilLabel)){
+        }
+        else {
+            return false;
+        }
+        if(checkifDouble(rpodEjeLabel.getText(), rpodEjeLabel)){
+        }
+        else {
+            return false;
+        }
+        if(checkifDouble(rpodAdLabel.getText(), rpodAdLabel)){
+        }
+        else {
+            return false;
+        }
+
+
+
+        if(checkifDouble(rpoiEsfLabel.getText(), rpoiEsfLabel)){
+        }
+        else {
+            return false;
+        }
+        if(checkifDouble(rpoiCilLabel.getText(), rpoiCilLabel)){
+        }
+        else {
+            return false;
+        }
+        if(checkifDouble(rpoiEjeLabel.getText(), rpoiEjeLabel)){
+        }
+        else {
+            return false;
+        }
+        if(checkifDouble(rpoiAdLabel.getText(), rpoiAdLabel)){
         }
         else {
             return false;
@@ -318,14 +318,20 @@ public class ControllerStage7 implements Initializable {
         return true;
     }
 
-    private boolean checkifDouble(String Value, String Name) {
-        try{
-            Double.parseDouble(Value);
+    private boolean checkifDouble(String Value, TextField textField) {
+        if(Value.equals("")){
+            textField.setText("0.0");
+            return true;
         }
-        catch (NumberFormatException e){
-            warningLabel.setText(Name + " invalido");
-            warningLabel.setVisible(true);
-            return false;
+        else{
+            try{
+                Double.parseDouble(Value);
+            }
+            catch (NumberFormatException e){
+                warningLabel.setText("Invalido");
+                warningLabel.setVisible(true);
+                return false;
+            }
         }
         return true;
     }
