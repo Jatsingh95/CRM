@@ -13,6 +13,8 @@ public class Customer extends Person{
     private String occupation;
     private int phone1;
     private int phone2;
+    private String email;
+    private Timestamp time;
 
     //Default Constructor
     public Customer() {
@@ -38,6 +40,8 @@ public class Customer extends Person{
                 occupation=myRs.getString("Occupation");
                 phone1=myRs.getInt("Phone1");
                 phone2=myRs.getInt("Phone2");
+                email=myRs.getString("Email");
+                time=myRs.getTimestamp("Time");
             }
         }catch (SQLException e) {
             e.printStackTrace();
@@ -62,6 +66,8 @@ public class Customer extends Person{
                 occupation=myRs.getString("Occupation");
                 phone1=myRs.getInt("Phone1");
                 phone2=myRs.getInt("Phone2");
+                email=myRs.getString("Email");
+                time=myRs.getTimestamp("Time");
             }
         }catch (SQLException e) {
             e.printStackTrace();
@@ -72,7 +78,7 @@ public class Customer extends Person{
 
     //Prepare to add to database
     public Customer(String fName, String lName, String currCedula, Date currDOB, String currAddress,
-                    String currOccupation, int currPhone1, int currPhone2){
+                    String currOccupation, int currPhone1, int currPhone2, String currEmail, Timestamp currTime){
         super.setFirstName(fName);
         super.setLastName(lName);
         super.setCedula(currCedula);
@@ -81,6 +87,8 @@ public class Customer extends Person{
         occupation=currOccupation;
         phone1=currPhone1;
         phone2=currPhone2;
+        email=currEmail;
+        time=currTime;
     }
 
 
@@ -107,7 +115,8 @@ public class Customer extends Person{
         return false;
     }
 
-    //This method is dif from CheckIfCustomerExists because it does not take into account its own cedula
+    //This method is dif from CheckIfCustomerExists because it does not take into account its own cedula.
+    //Used to prevent user to changing customers cedula to a cedula that already exists.
     public boolean checkIfCedulaExists(String cedula, int currCustID){
         Connection myConn = DataBaseHandler.connectToDataBase();
         PreparedStatement myStmt = null;
@@ -139,8 +148,8 @@ public class Customer extends Person{
         PreparedStatement myStmt = null;
         ResultSet myRs = null;
         try {
-            myStmt = myConn.prepareStatement("insert into customers (First_Name, Last_Name, Cedula, Date_of_Birth, Address, Occupation, Phone1, Phone2)"
-                    + "values (?, ?, ?, ?, ?, ?, ?, ?)");
+            myStmt = myConn.prepareStatement("insert into customers (First_Name, Last_Name, Cedula, Date_of_Birth, Address, Occupation, Phone1, Phone2, Email, Time)"
+                    + "values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
             myStmt.setString(1,super.getFirstName());
             myStmt.setString(2,super.getLastName());
             myStmt.setString(3,super.getCedula());
@@ -149,6 +158,8 @@ public class Customer extends Person{
             myStmt.setString(6,occupation);
             myStmt.setInt(7,phone1);
             myStmt.setInt(8,phone2);
+            myStmt.setString(9,email);
+            myStmt.setTimestamp(10,time);
             myStmt.execute();
         } catch (SQLException e) {
             e.printStackTrace();
@@ -164,7 +175,7 @@ public class Customer extends Person{
         try {
             myStmt = myConn.prepareStatement("UPDATE customers SET " +
                     "First_Name = ?, Last_Name = ?, Cedula = ?, Date_of_Birth = ?, " +
-                    "Address = ?, Occupation = ?, Phone1 = ?, Phone2 = ? " +
+                    "Address = ?, Occupation = ?, Phone1 = ?, Phone2 = ?, Email = ? " +
                     "WHERE Customer_ID = ?");
 
             myStmt.setString(1,super.getFirstName());
@@ -175,8 +186,12 @@ public class Customer extends Person{
             myStmt.setString(6,this.getOccupation());
             myStmt.setInt(7,this.getPhone1());
             myStmt.setInt(8,this.getPhone2());
+            myStmt.setString(9,this.getEmail());
 
-            myStmt.setInt(9,this.getCustomerID());
+            //Not necessary when editting customer, since it will override customer creation day
+            //myStmt.setTimestamp(10,this.getTime());
+
+            myStmt.setInt(10,this.getCustomerID());
 
             myStmt.execute();
 
@@ -231,5 +246,12 @@ public class Customer extends Person{
         this.phone2 = phone2;
     }
 
+    public String getEmail() {return email;}
+
+    public void setEmail(String email){this.email=email;}
+
+    public Timestamp getTime(){return time;}
+
+    public void setTime(Timestamp time) {this.time=time;}
 
 }

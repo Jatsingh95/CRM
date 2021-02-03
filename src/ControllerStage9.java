@@ -7,6 +7,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
@@ -238,9 +239,12 @@ public class ControllerStage9 implements Initializable {
 
             prescription.setLensType((String)lensTypeComboBox.getValue());
             prescription.setNotas(notasLabel.getText());
-            long millis=System.currentTimeMillis();
-            java.sql.Date date=new java.sql.Date(millis);
-            prescription.setDate(date);
+
+            java.util.Date date = new java.util.Date();
+            Object param = new java.sql.Timestamp(date.getTime());
+            //long millis=System.currentTimeMillis();
+            //java.sql.Timestamp date=new java.sql.Date(millis);
+            prescription.setDate((Timestamp) param);
 
             prescription.updateDatabase(); //Add prescription to database
 

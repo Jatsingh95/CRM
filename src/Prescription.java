@@ -53,7 +53,7 @@ public class Prescription {
 
     private String lensType;
     private String notas;
-    private Date date;
+    private Timestamp date;
 
 
     //Creating new Prescription
@@ -111,7 +111,7 @@ public class Prescription {
 
                 this.setLensType(myRs.getString("Lens_Type"));
                 this.setNotas(myRs.getString("Notas"));
-                this.setDate(myRs.getDate("Date"));
+                this.setDate(myRs.getTimestamp("Date"));
 
             }
         }catch (SQLException e) {
@@ -186,7 +186,7 @@ public class Prescription {
 
             myStmt.setString(30,this.getLensType());
             myStmt.setString(31,this.getNotas());
-            myStmt.setDate(32,this.getDate());
+            myStmt.setTimestamp(32,this.getDate());
 
 
 
@@ -253,7 +253,7 @@ public class Prescription {
 
             myStmt.setString(29,this.getLensType());
             myStmt.setString(30,this.getNotas());
-            myStmt.setDate(31,this.getDate());
+            myStmt.setTimestamp(31,this.getDate());
 
             myStmt.setInt(32,this.getPrescriptionID());
 
@@ -488,6 +488,6 @@ public class Prescription {
     public void setLensType(String lensType) {
         this.lensType = lensType;
     }
-    public Date getDate(){return date;}
-    public void setDate(Date date) {this.date=date;}
+    public Timestamp getDate(){return date;}
+    public void setDate(Timestamp date) {this.date=date;}
 }

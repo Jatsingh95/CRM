@@ -32,7 +32,7 @@
             </HBox>
             <VBox layoutX="35.0" layoutY="424.0" prefHeight="200.0" prefWidth="300.0">
                <children>
-                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                  <HBox fx:id="hbox1" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
                      <children>
                         <Label fx:id="rcname1" onMouseClicked="#rcid1Clicked" text="Cliente">
                            <font>
@@ -58,7 +58,7 @@
                         <Insets />
                      </VBox.margin>
                   </HBox>
-                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                  <HBox fx:id="hbox2" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
                      <children>
                         <Label fx:id="rcname2" onMouseClicked="#rcid2Clicked" text="Cliente">
                            <HBox.margin>
@@ -81,7 +81,7 @@
                         </Label>
                      </children>
                   </HBox>
-                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                  <HBox fx:id="hbox3" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
                      <children>
                         <Label fx:id="rcname3" onMouseClicked="#rcid3Clicked" text="Cliente">
                            <font>
@@ -101,7 +101,7 @@
                         </Label>
                      </children>
                   </HBox>
-                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                  <HBox fx:id="hbox4" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
                      <children>
                         <Label fx:id="rcname4" onMouseClicked="#rcid4Clicked" text="Cliente">
                            <font>
@@ -121,7 +121,7 @@
                         </Label>
                      </children>
                   </HBox>
-                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                  <HBox fx:id="hbox5" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
                      <children>
                         <Label fx:id="rcname5" onMouseClicked="#rcid5Clicked" text="Cliente">
                            <font>

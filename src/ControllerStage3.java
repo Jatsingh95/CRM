@@ -25,18 +25,22 @@ public class ControllerStage3 implements Initializable {
     public TextField cedulaField;
     public DatePicker dobDatePicker;
     public TextField addressField;
+    public TextField emailField;
     public TextField occupationField;
     public TextField phone1Field;
     public TextField phone2Field;
     public Label warningLabel;
+
     private String firstName;
     private String lastName;
     private String cedula;
     private Date dateOfBirth;
     private String address;
+    private String email;
     private String occupation;
     private int phone1;
     private int phone2;
+    private Timestamp time;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -67,7 +71,7 @@ public class ControllerStage3 implements Initializable {
             if(validateInputData()) {
                 //If all fields are okay create customer in database
                 Customer newCust = new Customer(firstName,lastName,cedula,dateOfBirth,
-                        address,occupation,phone1,phone2);
+                        address,occupation,phone1,phone2,email,time);
                 newCust.addCustomerToDataBase();
 
                 // proceed to stage 6
@@ -98,7 +102,7 @@ public class ControllerStage3 implements Initializable {
     private boolean validateInputData(){
         if(validateFirstName()&&validateLastName()&&validateCedula()&&
                 validateDOB()&&validateAddress()&&validateOccupation()&&
-                validatePhone1()&&validatePhone2()){
+                validatePhone1()&&validatePhone2()&&validateEmail()&&validateTime()){
             return true;
 
         }
@@ -218,6 +222,18 @@ public class ControllerStage3 implements Initializable {
             warningLabel.setVisible(true);
             return false;
         }
+        return true;
+    }
+
+    private boolean validateEmail(){
+        email=emailField.getText();
+        return true;
+    }
+
+    private boolean validateTime(){
+        java.util.Date date = new java.util.Date();
+        Object param = new java.sql.Timestamp(date.getTime());
+        time=(Timestamp) param;
         return true;
     }
 

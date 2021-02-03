@@ -10,12 +10,20 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import  javafx.scene.control.*;
+import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 
 public class ControllerStage1 implements Initializable {
 
     public Button searchButton;
     public TextField cedulaTextField;
+
+    public HBox hbox1;
+    public HBox hbox2;
+    public HBox hbox3;
+    public HBox hbox4;
+    public HBox hbox5;
+
     public Label rcname1;
     public Label rcname2;
     public Label rcname3;
@@ -32,7 +40,6 @@ public class ControllerStage1 implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
 
         //Load recent Customers
-
         Connection myConn = DataBaseHandler.connectToDataBase();
         PreparedStatement myStmt = null;
         ResultSet myRs = null;
@@ -72,6 +79,7 @@ public class ControllerStage1 implements Initializable {
             e.printStackTrace();
         }
         DataBaseHandler.disconnectFromDataBase(myRs,myStmt,myConn);
+
     }
 
     public void searchButtonClicked(){

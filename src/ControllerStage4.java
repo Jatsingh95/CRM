@@ -12,6 +12,7 @@ import java.io.IOException;
 import java.lang.reflect.Field;
 import java.net.URL;
 import java.sql.Date;
+import java.sql.Timestamp;
 import java.util.ResourceBundle;
 
 public class ControllerStage4 implements Initializable {
@@ -24,6 +25,7 @@ public class ControllerStage4 implements Initializable {
     public TextField cedulaField;
     public DatePicker dobDatePicker;
     public TextField addressField;
+    public TextField emailField;
     public TextField occupationField;
     public TextField phone1Field;
     public TextField phone2Field;
@@ -35,9 +37,11 @@ public class ControllerStage4 implements Initializable {
     private String cedula;
     private Date dateOfBirth;
     private String address;
+    private String email;
     private String occupation;
     private int phone1;
     private int phone2;
+    private Timestamp time;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -52,6 +56,7 @@ public class ControllerStage4 implements Initializable {
         addressField.setText(currCust.getAddress());
         occupationField.setText(currCust.getOccupation());
         phone1Field.setText(String.valueOf(currCust.getPhone1()));
+        emailField.setText(currCust.getEmail());
         customerID=currCust.getCustomerID();
 
         if(currCust.getPhone2()==0) {
@@ -94,7 +99,7 @@ public class ControllerStage4 implements Initializable {
             if(validateInputData()) {
                 //If all fields are okay create customer in database
                 Customer newCust = new Customer(firstName,lastName,cedula,dateOfBirth,
-                        address,occupation,phone1,phone2);
+                        address,occupation,phone1,phone2, email, time);
                 newCust.setCustomerID(customerID);
                 newCust.updateDatabase();
 
@@ -125,7 +130,7 @@ public class ControllerStage4 implements Initializable {
     private boolean validateInputData(){
         if(validateFirstName()&&validateLastName()&&validateCedula()&&
                 validateDOB()&&validateAddress()&&validateOccupation()&&
-                validatePhone1()&&validatePhone2()){
+                validatePhone1()&&validatePhone2()&&validateEmail()){
             return true;
 
         }
@@ -248,5 +253,9 @@ public class ControllerStage4 implements Initializable {
         return true;
     }
 
+    private boolean validateEmail(){
+        email=emailField.getText();
+        return true;
+    }
 
 }
