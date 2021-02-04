@@ -36,7 +36,7 @@
                      <children>
                         <Label fx:id="rcname1" onMouseClicked="#rcid1Clicked" text="Cliente">
                            <font>
-                              <Font size="16.0" />
+                              <Font size="13.0" />
                            </font>
                            <cursor>
                               <Cursor fx:constant="HAND" />
@@ -44,7 +44,7 @@
                         </Label>
                         <Label fx:id="rcid1" onMouseClicked="#rcid1Clicked" text="Cedula">
                            <font>
-                              <Font size="16.0" />
+                              <Font size="13.0" />
                            </font>
                            <cursor>
                               <Cursor fx:constant="HAND" />
@@ -65,7 +65,7 @@
                               <Insets />
                            </HBox.margin>
                            <font>
-                              <Font size="16.0" />
+                              <Font size="13.0" />
                            </font>
                            <cursor>
                               <Cursor fx:constant="HAND" />
@@ -73,7 +73,7 @@
                         </Label>
                         <Label fx:id="rcid2" onMouseClicked="#rcid2Clicked" text="Cedula">
                            <font>
-                              <Font size="16.0" />
+                              <Font size="13.0" />
                            </font>
                            <cursor>
                               <Cursor fx:constant="HAND" />
@@ -85,7 +85,7 @@
                      <children>
                         <Label fx:id="rcname3" onMouseClicked="#rcid3Clicked" text="Cliente">
                            <font>
-                              <Font size="16.0" />
+                              <Font size="13.0" />
                            </font>
                            <cursor>
                               <Cursor fx:constant="HAND" />
@@ -93,7 +93,7 @@
                         </Label>
                         <Label fx:id="rcid3" onMouseClicked="#rcid3Clicked" text="Cedula">
                            <font>
-                              <Font size="16.0" />
+                              <Font size="13.0" />
                            </font>
                            <cursor>
                               <Cursor fx:constant="HAND" />
@@ -105,7 +105,7 @@
                      <children>
                         <Label fx:id="rcname4" onMouseClicked="#rcid4Clicked" text="Cliente">
                            <font>
-                              <Font size="16.0" />
+                              <Font size="13.0" />
                            </font>
                            <cursor>
                               <Cursor fx:constant="HAND" />
@@ -113,7 +113,7 @@
                         </Label>
                         <Label fx:id="rcid4" onMouseClicked="#rcid4Clicked" text="Cedula">
                            <font>
-                              <Font size="16.0" />
+                              <Font size="13.0" />
                            </font>
                            <cursor>
                               <Cursor fx:constant="HAND" />
@@ -125,7 +125,7 @@
                      <children>
                         <Label fx:id="rcname5" onMouseClicked="#rcid5Clicked" text="Cliente">
                            <font>
-                              <Font size="16.0" />
+                              <Font size="13.0" />
                            </font>
                            <cursor>
                               <Cursor fx:constant="HAND" />
@@ -133,7 +133,7 @@
                         </Label>
                         <Label fx:id="rcid5" onMouseClicked="#rcid5Clicked" text="Cedula">
                            <font>
-                              <Font size="16.0" />
+                              <Font size="13.0" />
                            </font>
                            <cursor>
                               <Cursor fx:constant="HAND" />

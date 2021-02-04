@@ -32,11 +32,11 @@
             </HBox>
             <VBox layoutX="35.0" layoutY="424.0" prefHeight="200.0" prefWidth="300.0">
                <children>
-                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                  <HBox fx:id="hbox1" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
                      <children>
                         <Label fx:id="rcname1" onMouseClicked="#rcid1Clicked" text="Cliente">
                            <font>
-                              <Font size="16.0" />
+                              <Font size="13.0" />
                            </font>
                            <cursor>
                               <Cursor fx:constant="HAND" />
@@ -44,7 +44,7 @@
                         </Label>
                         <Label fx:id="rcid1" onMouseClicked="#rcid1Clicked" text="Cedula">
                            <font>
-                              <Font size="16.0" />
+                              <Font size="13.0" />
                            </font>
                            <cursor>
                               <Cursor fx:constant="HAND" />
@@ -58,14 +58,14 @@
                         <Insets />
                      </VBox.margin>
                   </HBox>
-                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                  <HBox fx:id="hbox2" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
                      <children>
                         <Label fx:id="rcname2" onMouseClicked="#rcid2Clicked" text="Cliente">
                            <HBox.margin>
                               <Insets />
                            </HBox.margin>
                            <font>
-                              <Font size="16.0" />
+                              <Font size="13.0" />
                            </font>
                            <cursor>
                               <Cursor fx:constant="HAND" />
@@ -73,7 +73,7 @@
                         </Label>
                         <Label fx:id="rcid2" onMouseClicked="#rcid2Clicked" text="Cedula">
                            <font>
-                              <Font size="16.0" />
+                              <Font size="13.0" />
                            </font>
                            <cursor>
                               <Cursor fx:constant="HAND" />
@@ -81,11 +81,11 @@
                         </Label>
                      </children>
                   </HBox>
-                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                  <HBox fx:id="hbox3" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
                      <children>
                         <Label fx:id="rcname3" onMouseClicked="#rcid3Clicked" text="Cliente">
                            <font>
-                              <Font size="16.0" />
+                              <Font size="13.0" />
                            </font>
                            <cursor>
                               <Cursor fx:constant="HAND" />
@@ -93,7 +93,7 @@
                         </Label>
                         <Label fx:id="rcid3" onMouseClicked="#rcid3Clicked" text="Cedula">
                            <font>
-                              <Font size="16.0" />
+                              <Font size="13.0" />
                            </font>
                            <cursor>
                               <Cursor fx:constant="HAND" />
@@ -101,11 +101,11 @@
                         </Label>
                      </children>
                   </HBox>
-                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                  <HBox fx:id="hbox4" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
                      <children>
                         <Label fx:id="rcname4" onMouseClicked="#rcid4Clicked" text="Cliente">
                            <font>
-                              <Font size="16.0" />
+                              <Font size="13.0" />
                            </font>
                            <cursor>
                               <Cursor fx:constant="HAND" />
@@ -113,7 +113,7 @@
                         </Label>
                         <Label fx:id="rcid4" onMouseClicked="#rcid4Clicked" text="Cedula">
                            <font>
-                              <Font size="16.0" />
+                              <Font size="13.0" />
                            </font>
                            <cursor>
                               <Cursor fx:constant="HAND" />
@@ -121,11 +121,11 @@
                         </Label>
                      </children>
                   </HBox>
-                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                  <HBox fx:id="hbox5" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
                      <children>
                         <Label fx:id="rcname5" onMouseClicked="#rcid5Clicked" text="Cliente">
                            <font>
-                              <Font size="16.0" />
+                              <Font size="13.0" />
                            </font>
                            <cursor>
                               <Cursor fx:constant="HAND" />
@@ -133,7 +133,7 @@
                         </Label>
                         <Label fx:id="rcid5" onMouseClicked="#rcid5Clicked" text="Cedula">
                            <font>
-                              <Font size="16.0" />
+                              <Font size="13.0" />
                            </font>
                            <cursor>
                               <Cursor fx:constant="HAND" />
