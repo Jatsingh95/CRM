@@ -8,8 +8,8 @@ public class DataBaseHandler {
 
     public static Connection connectToDataBase(){
 
-        String url = "jdbc:mysql://localhost:3306/visionplus";
-        String user = "root";
+        String url = "jdbc:mysql://192.168.100.7:3306/visionplus";
+        String user = "Jatinder";
         String password = "Singh123";
         Connection myConn = null;
 
