@@ -56,7 +56,7 @@ public class ControllerStage9 implements Initializable {
     public TextArea notasLabel;
     public Label warningLabel;
     public ComboBox lensTypeComboBox;
-
+    public Label lensTypeLabel;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -65,6 +65,7 @@ public class ControllerStage9 implements Initializable {
         for(String x : lenstypes){
             lensTypeComboBox.getItems().add(x);
         }
+        lensTypeComboBox.setVisible(false);
     }
 
     public void setPrescription(Integer id){
@@ -108,6 +109,7 @@ public class ControllerStage9 implements Initializable {
 
         notasLabel.setText(String.valueOf(prescription.getNotas()));
         lensTypeComboBox.setValue(prescription.getLensType());
+        lensTypeLabel.setText(prescription.getLensType());
 
     }
 
@@ -152,6 +154,10 @@ public class ControllerStage9 implements Initializable {
 
         editButton.setVisible(false);
         saveButton.setVisible(true);
+
+        lensTypeLabel.setText("");
+        lensTypeLabel.setVisible(false);
+        lensTypeComboBox.setVisible(true);
 
     }
 
